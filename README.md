@@ -55,7 +55,7 @@ def set_level(score,SPEED):
         SPEED = 23
     else:
        SPEED = 27
-  #      SPEED = score/6+1
+  #   SPEED = score/6+1
     return SPEED
 def drop_enemies(enemy_list):
     delay = random.random()
@@ -70,12 +70,10 @@ def draw_enemies(enemy_list):
 
 def update_enemy_positions(enemy_list,score):
     for idx, enemy_pos in enumerate(enemy_list):
-# update pos of enemy
+# update position of enemy
      if enemy_pos[1] >= 0 and enemy_pos[1] < HEIGHT:
        enemy_pos[1] += SPEED
-#   else:
- #      enemy_pos[0] = random.randint(0,WIDTH-enemy_size)
-  #     enemy_pos[1] = 0
+
 # IF THE BLOCK'S OFF THE SCREEN, WE WANNA SET IT TO 0
      else:
        enemy_list.pop(idx)
